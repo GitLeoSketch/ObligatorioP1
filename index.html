@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="icon" href="data:,">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBLIGATORIO P1</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<!-- ----------------------------- -->
+<!-- CABEZAL -->
+<!-- ----------------------------- -->
+<header id="cabezal">
+<!-- LOGO -->
+<!-- ------------------------------------------------------- -->
+  <figure>
+    <img id="logo" width="150px" src="./img/logo.jpg" alt="logo">
+  </figure>
+  
+  <h1 id="titulo">OBLIGATORIO P1</h1>
+<!-- MENU PRINCIPAL -->
+<!-- ------------------------------------------------------- -->
+  <nav>
+    <ul id="navPrincipal">
+
+      <li id="btnMenuHome">
+        <a>Home</a>
+      </li>
+
+      <li id="btnMenuLogin">
+        <a>Ingresar</a>
+      </li>
+      <li id="btnMenuRegistro">
+        <a>Registro</a>
+      </li>
+      <li id="btnMenuCerrarSesion">
+        <a>Salir</a>
+      </li>
+  </nav>
+
+</header>
+
+<!-- ----------------------------- -->
+<!-- CONTENIDO PRINCIPAL -->
+<!-- ----------------------------- -->
+
+<main>
+
+  <!-- MENU USUARIOS  -->
+
+<section id="menuUsuarios">
+    <!-- PERSONA -->
+      <!-- ------------------------------------------------------- -->
+
+  
+  <div id="cabezalPersona" >
+
+    <ul id="navSecundarioPersona">
+      
+      <li id="btnReservasPendientesPersonaMenu">
+        <a>Reservas Pendientes</a>
+      </li>
+      <li id="btnReservasFinalizadasPersonaMenu">
+        <a>Reservas Finalizadas</a>
+      </li>
+      <li id="btnReservarPersonaMenu">
+        <a>Reservar</a>
+      </li>
+      <li id="btnEstadisticasPersonaMenu">
+        <a>Estadísticas</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- LOCAL -->
+    <!-- ------------------------------------------------------- -->
+  <div id="cabezalLocal" >
+
+    <ul id="navSecundarioLocal">
+      
+      <li id="btnAdministrarReservasLocalMenu">
+        <a>Administrar Reservas</a>
+      </li>
+      <li id="btnEstadisticasLocalMenu">
+        <a>Estadísticas</a>
+      </li>
+      <li id="btnAdministrarLocalMenu">
+        <a>Administrar</a>
+      </li>
+    </ul>
+    
+  </div>
+  
+</section>
+<!-- FIN MENU USUARIOS -->
+    
+
+<!-- CONTENIDO Y PANTALLAS -->
+<section id="contenido">
+
+  <!-- HOME -->
+  <!-- ------------------------------------------------------- -->
+      <div id="divHome">
+        <h3>Home</h3>
+        <h1>Bienvenido</h1>
+      </div>
+
+  <!-- LOGIN -->
+  <!-- ------------------------------------------------------- -->
+      <div id="divLogin" class="fondoBlureado">
+        <h3>Ingreso</h3>
+        <label for="txtLoginUsuario">Usuario:</label>
+        <input id="txtLoginUsuario" type="text">
+        <br><br>
+        <label for="txtLoginPassword">Password:</label>
+        <input id="txtLoginPassword" type="password">
+        <br><br>
+        <input type="button" value="Ingresar" id="btnLoginIngresar">
+        <br><br>
+        <div id="divLoginMensajes"></div>
+      </div>
+
+<!-- REGISTRO -->
+    <!-- ------------------------------------------------------- -->
+      <div id="divRegistro" class="fondoBlureado">
+        <h3>Registro</h3>
+        <label for="txtRegistroUsuario">Usuario:</label>
+        <input id="txtRegistroUsuario" type="text">
+        <br><br>
+        <label for="txtRegistroPassword">Password:</label>
+        <input id="txtRegistroPassword" type="password">
+        <br><br>
+        <label for="txtRegistroNombre">Nombre:</label>
+        <input id="txtRegistroNombre" type="text">
+        <br><br>
+        <input type="button" value="Registrarse" id="btnRegistrarse">
+        <br><br>
+        <div id="divRegistroMensajes"></div>
+      </div>
+
+  <!-- ------------------------------------------------------- --> 
+<!-- PANTALLAS PERSONA -->
+ <!-- ------------------------------------------------------- -->
+ 
+ 
+       <!-- Realizar Reserva en Local -->
+    <!-- ------------------------------------------------------- -->
+
+
+    <div id="realizarReserva" class="fondoBlureado estiloTabla">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Local</th>
+            <th>Tipo de local</th>
+            <th>Disponibilidad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="bodyTablaReservar">
+        </tbody>
+      </table>
+
+  </div>
+
+  <div id="verDatosLocalAReservar" class="fondoBlureado">
+    
+    </div>
+
+    
+<!-- ESTADISTICAS -->
+  <!-- ------------------------------------------------------- -->
+
+  <div id="infoEstadistica">
+    <!-- INFORMACION DE LOCAL -->
+  <!-- ------------------------------------------------------- -->
+            <div id="infoEstadisticaLocal"  class="fondoBlureado estiloEstadisticas">
+                <h3>Local</h3>
+
+                <p id="pPorcentajeDeOcpacion">
+
+                </p>
+    
+                <p id="pPromedioDeCalificacion">
+
+                </p>
+    
+                <h4>Listado de calificaciones por local:</h4>
+
+                <ul id="ulListadoDeCalificaciones">
+                  
+                </ul>
+
+                <h4>Reservas:</h4>
+
+                <div id="divTotalesDeReservas"></div>                
+                </div> 
+                
+    <!-- INFORMACION PERSONA -->
+   <!-- ------------------------------------------------------- --> 
+                <div id="infoEstadisticaPersona" class="fondoBlureado estiloEstadisticas">
+                    <h3>Persona</h3>
+                    <h4>Listado de locales con reservas completadas.</h4>
+                    <ul id="ulListadoDeReservasCompletadas">
+                       
+                    </ul>
+                <h4>Local con más reservas hechas.</h4>
+    
+                <ul id="ulLocalConMasReservas">
+                    <li>local 1  \ 15 reservas hechas</li>
+                </ul>
+                   
+    
+    
+            </div>
+    
+    
+      </div>
+              <!-- Reservas Pendientes -->
+    <!-- ------------------------------------------------------- -->
+<div id="reservasPendientes" class="fondoBlureado estiloTabla">
+  <!-- fondoBlureado -->
+  <table>
+    <thead>
+      <tr>
+        <th>Foto</th>
+        <th>Local</th>
+        <th>Cupos</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="bodyTablaReservasPendientes">
+    </tbody>
+  </table>
+
+
+</div>
+
+      <!-- calificar RESERVA FINALIZADA -->
+  <!-- ------------------------------------------------------- -->
+    <div id="reservasFinalizadas" class="fondoBlureado estiloTabla" >
+    
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Local</th>
+          <th>Cupos</th>
+          <th>Puntuación</th>
+          <th>Acciones</th>
+          
+        </tr>
+      </thead>
+      <tbody id="bodyTablaPuntuarReservasFinalizadas">
+      </tbody>
+    </table>
+
+
+    </div>
+
+ <!-- ------------------------------------------------------- --> 
+<!-- PANTALLAS LOCAL -->
+ <!-- ------------------------------------------------------- -->
+
+
+
+
+    <!-- ADMINISTRAR LOCAL -->
+     <!-- ------------------------------------------------------- -->
+    
+        <div id="administrarLocal" class="fondoBlureado">
+          <hr>
+          <label for="habilitarDisponibilidad">Habilitar disponibilidad:</label>
+          <br>
+          <br>
+          <select name="habilitarDisponibilidad" id="habilitarDisponibilidad">
+              <!-- <option selected value="Habilitado">Habilitado</option>
+              <option value="Deshabilitado">Deshabilitado</option> -->
+          </select>
+
+          <p id="pMensajeHabilitarLocal"></p>
+
+          <hr>
+          <label for="txtCupoMaximo">Modificar cupo máximo:</label>
+          <br>
+          <br>
+            <input id="txtCupoMaximo" type="number">
+            <input type="button" value="Modificar" id="btnModificarCupoMaximo">
+            <p id="pMensajeModificarCupoMaximo"></p>
+            <hr>
+      </div>
+    
+   
+         <!-- CAMBIAR ESTADO DE RESERVA -->
+    <!-- ------------------------------------------------------- -->
+
+<div id="adminReserva" class="fondoBlureado estiloTabla">
+
+  <div id="buscadorReservasPendientesLocal">
+    <label for="buscadorDeReservas">Buscar una Reserva:</label>
+    <input type="text" id="buscadorDeReservas" placeholder=" Nombre Cliente...">
+    <input type="button" value="Buscar" id="btnBuscarReservasEnLocal">
+    <br>
+    <br>
+  </div>
+  
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Cupos</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="bodyTablaReservasPendientesLocal">
+    </tbody>
+  </table>
+
+  </div>
+</section>
+
+</main>
+<!-- FIN DEL CONTENIDO PRINCIPAL -->
+
+
+<!-- PIE DE PANTALLA -->
+<div id="pie">
+
+</div><!-- FIN PIE -->
+
+
+
+<!-- scripts -->
+  <script type="text/javascript" src="js/clases.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+ 
+</body>
+
+</html>
